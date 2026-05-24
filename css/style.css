@@ -25,9 +25,31 @@ body {
     box-sizing: border-box;
 }
 
+.hd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #logobooki {
     width: 95px;
     height: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.nav-links a:hover{
+   text-decoration: underline; 
 }
 
 a {
@@ -76,8 +98,63 @@ a {
     /* enlève la marge par défaut du <p> */
 }
 
-.article i {
-    color: black;
+/***** Filtres *********/
+
+
+.section-filtres {
+    margin-top: 35px;
+      display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.section-filtres h2 {
+    margin-bottom: 20px;
+    
+}
+
+.filter-btn {
+    border: 2px solid #d9d9d9;
+    background: white;
+    padding: 12px 20px;
+    max-height: 45px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.filter-btn:hover {
+    background: #0065fc;
+}
+
+.filter-btn i {
+    color: #0065fc;
+}
+
+.custom-info-icon {  /*on ne peut pas trouver 
+    l'icone exacte sur fontawesome donc in faut la creer totalement en css*/
+    width: 16px;
+    height: 16px;
+
+    background-color: white;   /* whitek circle */
+    border: 2px solid grey;    /* grey border */
+
+    border-radius: 50%;
+
+    color:#0065FC;               /* blue "i" */
+    font-weight: bold;
+    font-family: "Special Elite", monospace;
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #site-search {
@@ -230,7 +307,7 @@ a {
 }
 
 footer {
-    display: flex;
+    display: flex; /* mets tous les engfants sur la meme ligne*/
     justify-content: space-between;
     background-color: var(--main-bg-color);
     padding: 30px;
@@ -263,7 +340,7 @@ footer {
 .activites-marseille {
     background-color: white;
     border-radius: 15px;
-    15px;
+    /* 15px; */
     padding: 10px;
 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -317,12 +394,21 @@ footer {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     /* a tester   
     .hebergements-and-populaires {
         flex-direction: row;
     }*/
+footer {
+    display: inline;
+   
+}
 
-.activites-marseille img {
-height: 100px;}
+.footer1 {
+    display: inline;
+ 
+}
+
+    .activites-marseille img {
+    height: 100px;}
 }
