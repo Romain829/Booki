@@ -48,8 +48,8 @@ body {
     font-weight: 500;
 }
 
-.nav-links a:hover{
-   text-decoration: underline; 
+.nav-links a:hover {
+    text-decoration: underline;
 }
 
 a {
@@ -103,7 +103,7 @@ a {
 
 .section-filtres {
     margin-top: 35px;
-      display: flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 25px;
@@ -112,7 +112,7 @@ a {
 
 .section-filtres h2 {
     margin-bottom: 20px;
-    
+
 }
 
 .filter-btn {
@@ -126,7 +126,7 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
-    
+
 }
 
 .filter-btn:hover {
@@ -137,17 +137,21 @@ a {
     color: #0065fc;
 }
 
-.custom-info-icon {  /*on ne peut pas trouver 
+.custom-info-icon {
+    /*on ne peut pas trouver 
     l'icone exacte sur fontawesome donc in faut la creer totalement en css*/
     width: 16px;
     height: 16px;
 
-    background-color: white;   /* whitek circle */
-    border: 2px solid grey;    /* grey border */
+    background-color: white;
+    /* whitek circle */
+    border: 2px solid grey;
+    /* grey border */
 
     border-radius: 50%;
 
-    color:#0065FC;               /* blue "i" */
+    color: #0065FC;
+    /* blue "i" */
     font-weight: bold;
     font-family: "Special Elite", monospace;
     font-size: 16px;
@@ -306,8 +310,11 @@ a {
     margin-bottom: 5px;
 }
 
+/********footer*********/
+
 footer {
-    display: flex; /* mets tous les engfants sur la meme ligne*/
+    display: flex;
+    /* mets tous les enfants sur la meme ligne*/
     justify-content: space-between;
     background-color: var(--main-bg-color);
     padding: 30px;
@@ -395,20 +402,100 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 768px) {
-    /* a tester   
     .hebergements-and-populaires {
-        flex-direction: row;
-    }*/
-footer {
-    display: inline;
-   
-}
+        flex-direction: column;
+    }
 
-.footer1 {
-    display: inline;
- 
-}
+    footer {
+        display: inline;
+    }
+
+    .footer1 {
+        display: inline;
+    }
 
     .activites-marseille img {
-    height: 100px;}
+        height: 100px;
+        width: 200px;
+    }
+
+
+    .conteneur-colonnes {
+        display: inline;
+    }
+
+    .hebergements1 {
+        display: inline;
+    }
+
+    /* ordre des sections */
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .populaires {
+        order: 1;
+        /* 👈important car on veut
+         afficher sur les petits ecrans d'abord cette colonne*/
+        width: 100%;
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    .hebergements {
+        order: 2;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+    }
+
+    /* cartes populaires */
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .populaires-cards .card {
+        width: 95%;
+        display: flex;
+        padding: 5px;
+    }
+
+    /* image */
+    .populaires-cards img {
+        width: 60%;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    /* texte */
+    .populaires-cards .card-content {
+        width: 40%;
+        padding: 12px;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 14px;
+    }
+
+    .activites1 {
+        width: 100%;
+        /* on avait mis 22%  sur grand ecran 
+    pour repartir sur 4 colonnes
+    donc ici on retabli 100% */
+    }
 }
