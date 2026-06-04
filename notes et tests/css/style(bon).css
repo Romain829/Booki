@@ -1,0 +1,504 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.hd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logobooki {
+    width: 95px;
+    height: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    /* aligne verticalement */
+    gap: 10px;
+    /* espace entre l'icône et le texte */
+}
+
+.article p {
+    margin: 0;
+    /* enlève la marge par défaut du <p> */
+}
+
+/***** Filtres *********/
+
+
+.section-filtres {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.section-filtres h2 {
+    margin-bottom: 20px;
+
+}
+
+.filter-btn {
+    border: 2px solid #d9d9d9;
+    background: white;
+    padding: 12px 20px;
+    max-height: 45px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.filter-btn:hover {
+    background: #0065fc;
+}
+
+.filter-btn i {
+    color: #0065fc;
+}
+
+.custom-info-icon {
+    /*on ne peut pas trouver 
+    l'icone exacte sur fontawesome donc in faut la creer totalement en css*/
+    width: 16px;
+    height: 16px;
+
+    background-color: white;
+    /* whitek circle */
+    border: 2px solid grey;
+    /* grey border */
+
+    border-radius: 50%;
+
+    color: #0065FC;
+    /* blue "i" */
+    font-weight: bold;
+    font-family: "Special Elite", monospace;
+    font-size: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#site-search {
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+}
+
+#button1 {
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #0065FC;
+    padding: 4px 4px;
+    display: inline-block;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/****** Hebergements And Populaires ***********/
+
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* 👈 important */
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+
+/****** Hebergements ***********/
+.hebergements {
+    background-color: #e8e8e8;
+    padding: 30px;
+    border-radius: 20px;
+    width: 65%;
+}
+
+.hebergements h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* Conteneur des 3 colonnes */
+.conteneur-colonnes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Chaque colonne */
+.hebergements1 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Carte hôtel */
+.carte-hotel {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.carte-hotel img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: block;
+}
+
+/* Zone texte */
+.texte-hotel {
+    padding-top: 10px;
+}
+
+.texte-hotel h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.texte-hotel p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/********footer*********/
+
+footer {
+    display: flex;
+    /* mets tous les enfants sur la meme ligne*/
+    justify-content: space-between;
+    background-color: var(--main-bg-color);
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.footer1 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    list-style: none;
+    padding: 0;
+}
+
+/********activites*********/
+
+.activites1 {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* li Activites Marseille */
+.activites-marseille {
+    background-color: white;
+    border-radius: 15px;
+    /* 15px; */
+    padding: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.activites-marseille img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: block;
+}
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    footer {
+        display: inline;
+    }
+
+    .footer1 {
+        display: inline;
+    }
+
+    .activites-marseille img {
+        height: 100px;
+        width: 200px;
+    }
+
+
+    .conteneur-colonnes {
+        display: inline;
+    }
+
+    .hebergements1 {
+        display: inline;
+    }
+
+    /* ordre des sections */
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .populaires {
+        order: 1;
+        /* 👈important car on veut
+         afficher sur les petits ecrans d'abord cette colonne*/
+        width: 100%;
+        margin-top: 0;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hebergements {
+        order: 2;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+    }
+
+    /* cartes populaires */
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .populaires-cards .card {
+        width: 95%;
+        display: flex;
+        padding: 5px;
+    }
+
+    /* image */
+    .populaires-cards img {
+        width: 60%;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    /* texte */
+    .populaires-cards .card-content {
+        width: 40%;
+        padding: 12px;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 14px;
+    }
+
+    .activites1 {
+        width: 100%;
+        /* on avait mis 22%  sur grand ecran 
+    pour repartir sur 4 colonnes
+    donc ici on retabli 100% */
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hebergements-and-populaires {
+            background-color: rgb(240, 224, 143);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            /* 👈 important */
+        }
+
+        .hebergements {
+            width: 65%;
+        }
+
+        .hebergements {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /*.hebergements {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-bg-color);
+    padding: 30px;
+    margin-top: 20px;
+}*/
+        .hebergements {
+            background-color: var(--main-bg-color);
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .hebergements1 {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hebergements-and-populaires">
+
+        <section class="hebergements">
+            <h2>Hébergements à Marseille</h2>
+            <ul class="hebergements1">
+                <li><img src="images/hebergements/annie-spratt.jpg" id="logobooki">
+                </li>
+                <li><img src="images/hebergements/aw-creative.jpg" id="logobooki">
+                </li>
+            </ul>
+            <ul class="hebergements1">
+                <li><img src="images/hebergements/emile-guillemot.jpg" id="logobooki">
+                </li>
+                <li><img src="images/hebergements/febrian-zakaria.jpg" id="logobooki">
+                </li>
+            </ul>
+            <ul class="hebergements1">
+                <li><img src="images/hebergements/febrian-zakaria2.jpg" id="logobooki">
+                </li>
+                <li><img src="images/hebergements/marcus-loke.jpg" id="logobooki">
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>
