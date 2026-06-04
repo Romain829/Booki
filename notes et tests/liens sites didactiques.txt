@@ -1,7 +1,0 @@
-Flexbox comment comprendre:
-
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
-
-Site utilisé grandement avant l'usage de l IA où comme REDDIT les usagers se répondent et se dépannent entre eux:
-https://stackoverflow.com/
